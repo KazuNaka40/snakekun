@@ -1,0 +1,46 @@
+{
+  "name": "snakekun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KazuNaka40/snakekun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KazuNaka40/snakekun/issues"
+  },
+  "homepage": "https://github.com/KazuNaka40/snakekun#readme",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "lint-staged": "^10.2.11",
+    "prettier": "2.0.5",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.7"
+  },
+  "jest": {
+"preset": "ts-jest",
+"testPathIgnorePatterns": [
+"<rootDir>/build/",
+"<rootDir>/node_modules/"
+     ]
+   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}
