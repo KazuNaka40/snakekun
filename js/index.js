@@ -51,23 +51,18 @@ function draw(cvs){
     ctx.fillRect(mX*tileSize,mY*tileSize,tileSize,tileSize);
 }
 
+function update () {
+    mX += mDX;
+    mY += mDY;
+    if(mX*tileSize === mFoodX && mY*tileSize===mFoodY ){
+        addFood();
+    }
 
+}
 
 function onPaint(){
-    if(!mTimer){
-        mTimer=performance.now();
-    }
-    if(mTimer+timerInterval<performance.now()) {
-        mTimer += timerInterval;
-        console.log(mTimer);
-        draw(document.getElementById("cnvs"));
-        mX += mDX;
-        mY += mDY;
-    }
-    console.log(mTimer,"suke");
-    requestAnimationFrame(onPaint);
-
-
+    update();
+    draw(document.getElementById("cnvs"));
 }
 
 
@@ -82,6 +77,6 @@ window.onkeydown=function(ev){
 
 window.onload=function() {
     addFood();
-    onPaint();
+    setInterval(onPaint, timerInterval);
 
 }
