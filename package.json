@@ -29,12 +29,12 @@
     "typescript": "^3.9.7"
   },
   "jest": {
-"preset": "ts-jest",
-"testPathIgnorePatterns": [
-"<rootDir>/build/",
-"<rootDir>/node_modules/"
-     ]
-   },
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "<rootDir>/build/",
+      "<rootDir>/node_modules/"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
