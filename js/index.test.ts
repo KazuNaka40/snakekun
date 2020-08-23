@@ -1,4 +1,4 @@
-import { random } from "../js";
+/*import { random } from "./index";
 
 it("sukeko", () => {
   // console.log(random(0, 100, 10));
@@ -7,4 +7,4 @@ it("sukeko", () => {
   expect(result % 5).toBe(0);
   expect(result).toBeGreaterThanOrEqual(10);
   expect(result).toBeLessThanOrEqual(100);
-});
+});*/
