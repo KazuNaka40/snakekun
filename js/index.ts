@@ -8,7 +8,7 @@ let mFoodX = 2;
 let mFoodY = 5;
 let gameOver: boolean;
 
-let timerInterval = 80;
+let timerInterval = 10;
 
 function addFood() {
   let cvs = <HTMLCanvasElement>document.getElementById("cnvs");
